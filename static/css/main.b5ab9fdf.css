@@ -1,0 +1,2 @@
+body,h1,h2,h3,h4,h5,h6,li,p,ul{margin:0;padding:0}body{background-color:#f9f9f9;font-family:Arial,sans-serif}.post-list{grid-gap:20px;display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));padding:20px}.post{background-color:#fff;box-shadow:0 2px 4px rgba(0,0,0,.1);margin:0;padding:0}.post,.post img{border-radius:5px;height:100%;width:100%}.post img{object-fit:cover}.post h2{font-size:24px}.post h2,.post p{margin-top:10px}
+/*# sourceMappingURL=main.b5ab9fdf.css.map*/
