@@ -1,3 +1,5 @@
+/* Assuming this is your CSS file */
+
 /* Reset some default styles for consistency */
 body,
 h1,
@@ -18,15 +20,31 @@ body {
   background-color: #f9f9f9;
 }
 
-/* Add styles for AnimatedBackground */
-.animated-background {
-  /* ... Previous styles for the AnimatedBackground ... */
+.neuro-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Set a low z-index so it's just above the AnimatedBackground */
+  overflow: hidden; /* Hide the overflow to prevent scrollbars */
+  pointer-events: none; /* Ignore pointer events on the neuro-lines container */
+}
+
+.neuro-line {
+  width: 1px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  transform-origin: 50% 100%;
 }
 
 /* Add styles for the container of other elements */
 .container {
-  /* ... Previous styles for the container ... */
+  position: relative;
+  z-index: 1; /* Set a higher z-index to place it above the NeuroLines */
 }
+
 
 /* Add styles for the PostList component */
 .post-list {
@@ -37,9 +55,6 @@ body {
 }
 
 .post {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
   /* Updated styles to remove white space */
   padding: 0;
   margin: 0;
@@ -61,18 +76,61 @@ body {
 }
 
 .post p {
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
+.transparent-h2 {
+  background-color: transparent;
+}
+
+.post.home {
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+  height: 100%; /* Ensure the container takes the full height */
+}
+
+/* styles.css */
+
+/* ... Other styles ... */
+
+/* Add styles for the AnimatedBackground component */
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  z-index: -1; /* Set a negative z-index to keep it at the back */
+}
 /* Add styles for the Gallery component */
 /* ... */
 
 /* Add styles for the Home component */
 /* ... */
 
-/* Keyframes for neurographic art animation */
-@keyframes neurographicAnimation {
-  /* ... */
+/* Keyframes for the gradient animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-/* ... Other styles ... */
+/* Keyframes for the neuro line animation */
+@keyframes neuroLineAnimation {
+  0% {
+    height: 1px;
+  }
+  100% {
+    height: 200px;
+  }
+}
