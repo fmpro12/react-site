@@ -1,0 +1,29 @@
+.About {
+  flex: 1; /* Takes up 20% of the container's height */
+  background-color: aquamarine;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  color: purple;
+  font-size: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .About {
+      margin: 0; /* Remove any margin */
+      background-color: aquamarine;
+      padding: 0; /* Remove any padding */
+      /* Other styles for mobile view, if needed */
+      flex: 1; /* Take up the full height on mobile */
+      /* Other styles for mobile view, if needed */
+      display: flex; /* Adjust display for mobile */
+    }
+    
+    .About .h1 {
+      /* No need for flex properties on mobile */
+      margin: 0; /* Remove any margin */
+      padding: 0; /* Remove any padding */
+      font-size: 14px;
+      flex: 1;
+    }
+  }

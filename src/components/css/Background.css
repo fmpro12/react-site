@@ -1,0 +1,6 @@
+.AnimatedBackground {
+  flex: 8; /* Takes up 80% of the container's height */
+  background-image: url("../../../public/images/image5.jpeg");
+  background-size: cover;
+  background-position: center;
+}

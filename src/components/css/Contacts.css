@@ -1,0 +1,75 @@
+.contacts {
+    flex: 1; /* Takes up 20% of the container's height */
+    background-color: aquamarine;
+    background-size: cover;
+    background-position: center;   
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: white;
+    font-size: 24px;
+  }  
+  .contact-info-wa {
+    background-color: green;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .contact-info-inst {
+    background-color: rgb(234, 29, 63);
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }  
+  .contact-info i {
+    font-size: 24px;
+    margin: 10px;
+    padding: 10px;
+  }
+.contacts-background {
+  display: flex;
+  flex-direction: row;
+}
+a {
+  color: whitesmoke;
+  margin: 2px;
+}
+i {
+  margin: 2px;
+}
+@media (max-width: 768px) {
+  .contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}   
+  @media (max-width: 768px) {
+    .contacts i {
+      flex: 1; /* Take up the full height on mobile */
+      /* Other styles for mobile view, if needed */
+      font-size: 20px;
+    }
+  }   
+  @media (max-width: 768px) {
+    .contacts-background{
+      align-items: center;/* Take up the full height on mobile */
+      /* Other styles for mobile view, if needed */
+    }
+  } 
+  @media (max-width: 768px) {
+    .contact-info i {
+      flex: 1; /* Take up the full height on mobile */
+      /* Other styles for mobile view, if needed */
+    }
+  }   
+  @media (max-width: 768px) {
+    .contact-info{
+      font-size: 14px; /* Take up the full height on mobile */
+      /* Other styles for mobile view, if needed */
+    }
+  }    
